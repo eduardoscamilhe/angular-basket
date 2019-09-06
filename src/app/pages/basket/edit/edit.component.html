@@ -1,0 +1,47 @@
+<div class="uk-flex-center" uk-grid>
+  <div class="uk-width-1-2@m">
+    <div class="uk-card uk-card-default uk-card-body">
+      <form [formGroup]="form">
+        <div class="uk-margin">
+          <input type="text" mask="NN-NNN" maxlength="6" placeholder="CODE" formControlName="code"
+            class="uk-input uk-form-large" />
+          <span class="uk-text-danger" *ngIf="(!form.controls.code.pristine && !form.controls.code.valid)">Invalid
+            Code</span>
+        </div>
+        <div class="uk-margin">
+          <input type="text" placeholder="TITLE" formControlName="title" class="uk-input uk-form-large" />
+          <span class="uk-text-danger" *ngIf="(!form.controls.title.pristine && !form.controls.title.valid)">Invalid
+            Title</span>
+        </div>
+        <div class="uk-margin">
+          <input type="text" placeholder="PRICE" formControlName="price" class="uk-input uk-form-large" />
+          <span class="uk-text-danger" *ngIf="(!form.controls.price.pristine && !form.controls.price.valid)">Invalid
+            Price</span>
+        </div>
+        <div class="uk-margin">
+          <input type="text" placeholder="DESCRIPTION" formControlName="description" class="uk-input uk-form-large" />
+          <span class="uk-text-danger"
+            *ngIf="(!form.controls.description.pristine && !form.controls.description.valid)">Invalid
+            Description</span>
+        </div>
+        <div class="uk-margin">
+          <input type="text" placeholder="QUANTITY" formControlName="quantity" class="uk-input uk-form-large" />
+          <span class="uk-text-danger"
+            *ngIf="(!form.controls.quantity.pristine && !form.controls.quantity.valid)">Invalid
+            Quantity</span>
+        </div>
+        <div class="uk-margin">
+          <select placeholder="CATEGORY" formControlName="category" class="uk-input uk-form-large">
+            <option id="cat.id" *ngFor="let cat of category">{{cat.description}}</option>
+
+          </select>
+          <span class="uk-text-danger"
+            *ngIf="(!form.controls.category.pristine && !form.controls.category.valid)">Invalid
+            Category</span>
+        </div>
+        <button class="uk-button uk-button-primary" (click)="submit()">SUBMIT</button>
+      </form>
+
+    </div>
+  </div>
+</div>

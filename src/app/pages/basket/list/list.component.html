@@ -1,0 +1,32 @@
+<app-loading [data]="products"></app-loading>
+<table class="uk-table uk-table-hover uk-table-divider uk-table-striped" *ngIf="products">
+  <thead>
+    <tr>
+      <th class="text-center">Code</th>
+      <th class="text-center">Title</th>
+      <th class="text-center">Price</th>
+      <th class="text-center">Description</th>
+      <th class="text-center">Category</th>
+      <th class="text-center">Quantity</th>
+      <th class="text-center"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of products">
+      <td>{{prod.code}}</td>
+      <td>{{prod.title}}</td>
+      <td>{{prod.Price}}</td>
+      <td>{{prod.description}}</td>
+      <td>{{prod.category}}</td>
+      <td>{{prod.quantity}}</td>
+      <td><button class="uk-button uk-button-default prod" *ngIf="prod.code != codeProd"
+          (click)="edit(prod)">EDIT</button>
+        <button class="uk-button uk-button-default prod" (click)="delete(prod)">DELETE</button>
+
+      </td>
+    </tr>
+  </tbody>
+  <button class="uk-button uk-button-primary" (click)="newProd()">NEW</button>
+</table>
+
+<app-edit *ngIf="product" [product]="product"></app-edit>
