@@ -12,7 +12,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { LoginComponent } from './pages/login/login.component';
 import { MasterComponent } from './pages/master/master.component';
 import { ManagerGuard } from './guards/manager.guard';
-import { AuthGuard } from "./guards/AuthGuard";
+import { AuthGuard } from './guards/auth.guard';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AuthGuard } from "./guards/AuthGuard";
     MaskDirective,
     LoadingComponent,
     LoginComponent,
-    MasterComponent
+    MasterComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

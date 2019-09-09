@@ -10,7 +10,9 @@ export class UserUtil {
             return JSON.parse(data);
         return null;
     }
-
+    static clearAccess() {
+        localStorage.removeItem('user.token');
+    }
     public static hasRole(role: string): boolean {
         const user = this.get();
         if (!user || !user.roles || user.roles.length == 0)

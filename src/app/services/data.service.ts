@@ -8,6 +8,9 @@ import { Product } from '../models/product.model';
 export class DataService {
     constructor(private http: HttpClient) {
     }
+    auth(data: any) {
+        return this.http.post('http://localhost:3000/accounts/auth', data);
+    }
     get() {
         return this.http.get('http://localhost:3000/basket');
     }

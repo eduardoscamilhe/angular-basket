@@ -1,1 +1,23 @@
-<p>login works!</p>
+<br><br><br>
+
+<div class="uk-flex-center" uk-grid>
+    <div class="uk-width-1-2@m">
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Autentique-se</h3>
+            <form [formGroup]="login">
+                <div class="uk-margin">
+                    <input type="email" class="uk-input uk-form-large" placeholder="E-Mail" formControlName="username">
+                </div>
+                <div class="uk-margin">
+                    <input type="password" class="uk-input uk-form-large" placeholder="PASSWORD"
+                        formControlName="password">
+                </div>
+            </form>
+            <div class="uk-margin uk-text-right">
+                <a routerLink="/signup">Ainda não sou cadastrado</a>
+                &nbsp;&nbsp;
+                <button class="uk-button uk-button-default" (click)="submit()">Entrar</button>
+            </div>
+        </div>
+    </div>
+</div>

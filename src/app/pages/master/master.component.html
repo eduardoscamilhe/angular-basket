@@ -1,1 +1,21 @@
-<p>master works!</p>
+<nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-left">
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="" uk-toggle="target#my-id">
+                    MENU
+                </a>
+            </li>
+            <a href="" (click)="logout()">LOGOUT</a>
+        </ul>
+    </div>
+</nav>
+<div id="id" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanveas-close" type="button" uk-close>
+
+        </button>
+    </div>
+</div>
+<div class="uk-padding">
+    <router-outlet></router-outlet>
+</div>

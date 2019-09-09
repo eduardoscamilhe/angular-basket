@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserUtil } from 'src/app/util/user.util';
 
 @Component({
   selector: 'app-master',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
+
+  logout() {
+    UserUtil.clearAccess();
+    this.route.navigate(['login']);
+  }
+
 
 }
