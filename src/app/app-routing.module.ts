@@ -18,8 +18,6 @@ const routes: Routes = [
       { path: "list", component: ListComponent },
       { path: "edit/:code", component: EditComponent, canActivate: [ManagerGuard] },
     ]
-
-
   },
 
 ];

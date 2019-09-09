@@ -9,7 +9,7 @@ export class DataService {
     constructor(private http: HttpClient) {
     }
     auth(data: any) {
-        return this.http.post('http://localhost:3000/accounts/auth', data);
+        return this.http.post('http://localhost:3000/users/auth', data);
     }
     get() {
         return this.http.get('http://localhost:3000/basket');
